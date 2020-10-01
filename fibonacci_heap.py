@@ -68,6 +68,7 @@ class FibonacciHeap(Heap):
         node = Node(value)
 
         if self.min > node.value:
+            self.min = node.value
             return
 
         if self.root_list.head == None:
@@ -100,7 +101,8 @@ class FibonacciHeap(Heap):
         """
         pass
 
-heap = FibonacciHeap(min)
-heap.insert(3)
-heap.insert(5)
-print(heap)
+#heap = FibonacciHeap(min)
+#heap.insert(3)
+#heap.insert(5)
+#heap.insert(2)
+#print(heap.min)
