@@ -59,7 +59,7 @@ class FibonacciHeap(Heap):
 
     def __init__(self, min):
         self.min = 1000000
-        root_list = LinkedList()
+        self.root_list = LinkedList() 
         
     def insert(self, value: int) -> None:
         """
@@ -70,14 +70,14 @@ class FibonacciHeap(Heap):
         if self.min > node.value:
             return
 
-        if root_list.head == None:
-            root_list.head = node
+        if self.root_list.head == None:
+            self.root_list.head = node
             node.left = None
             return
 
         if not self.root_list:
-            node.left = root_list.tail
-            root_list.tail.right = root_list.tail = self.min = node
+            node.left = self.root_list.tail
+            self.root_list.tail.right = self.root_list.tail = self.min = node
             return
 
         pass
@@ -99,3 +99,8 @@ class FibonacciHeap(Heap):
         Fusionne deux arbres
         """
         pass
+
+heap = FibonacciHeap(min)
+heap.insert(3)
+heap.insert(5)
+print(heap)
