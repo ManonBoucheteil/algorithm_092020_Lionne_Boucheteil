@@ -57,7 +57,7 @@ class FibonacciHeap(Heap):
     et en français : https://fr.wikipedia.org/wiki/Tas_de_Fibonacci#Implémentation_des_opérations
     """
 
-    def __init__(self, min):
+    def __init__(self, min: Node = None):
         self.min = 1000000
         self.root_list = LinkedList() 
         
