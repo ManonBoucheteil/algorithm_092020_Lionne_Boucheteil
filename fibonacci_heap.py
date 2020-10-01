@@ -99,7 +99,10 @@ class FibonacciHeap(Heap):
         """
         Fusionne deux arbres
         """
-        pass
+        #self.root_list.tail.right = fibonnaci_heap.root_list.head.left
+        #self.root_list.tail = fibonnaci_heap.root_list.tail
+        #if self.min > fibonnaci_heap.min
+        #   self.min = fibonnaci_heap.min
 
 #heap = FibonacciHeap(min)
 #heap.insert(3)
