@@ -103,7 +103,9 @@ class FibonacciHeap(Heap):
         #self.root_list.tail = fibonnaci_heap.root_list.tail
         #if self.min > fibonnaci_heap.min
         #   self.min = fibonnaci_heap.min
-
+        
+        pass 
+    
 #heap = FibonacciHeap(min)
 #heap.insert(3)
 #heap.insert(5)
