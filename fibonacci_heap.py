@@ -22,7 +22,7 @@ class Heap(object):
         """
         pass
 
-    def decrease_key(self, current_value: int, new_value :int) -> None:
+    def decrease_key(self, current_value: int, new_value: int) -> None:
         """
         Modify une valeur dans l'arbre
         """
@@ -34,17 +34,20 @@ class Heap(object):
         """
         pass
 
-class Node :
-    
-    def __init__(self, value) :
-       self.value = value
-       self.child = self.left = self.right = self.parent = None
 
-class LinkedList :
-    
-    def __init__(self) :
-       self.tail = None
-       self.head = None
+class Node:
+
+    def __init__(self, value):
+        self.value = value
+        self.child = self.left = self.right = self.parent = None
+
+
+class LinkedList:
+
+    def __init__(self):
+        self.tail = None
+        self.head = None
+
 
 class FibonacciHeap(Heap):
     """
@@ -54,27 +57,27 @@ class FibonacciHeap(Heap):
     et en français : https://fr.wikipedia.org/wiki/Tas_de_Fibonacci#Implémentation_des_opérations
     """
 
-    def __init__(self, min) :
+    def __init__(self, min):
         self.min = 1000000
         root_list = LinkedList()
-    
+        
     def insert(self, value: int) -> None:
         """
         Ajoute une valeur dans l'arbre
         """
         node = Node(value)
 
-        if self.min  > node.value :
-            return   
-        
-        if LinkedList.head = None :
-            LinkedList.head = node
+        if self.min > node.value:
+            return
+
+        if root_list.head == None:
+            root_list.head = node
             node.left = None
             return
 
-        if not self.root_list :    
-            node.left = LinkedList.tail
-            LinkedList.tail.right = LinkedList.tail = self.min = node
+        if not self.root_list:
+            node.left = root_list.tail
+            root_list.tail.right = root_list.tail = self.min = node
             return
 
         pass
@@ -84,8 +87,6 @@ class FibonacciHeap(Heap):
         Retourne la valeur minimum dans l'arbre
         """
         return self.min
-
-        pass
 
     def delete_min(self) -> int:
         """
